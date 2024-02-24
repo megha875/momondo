@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momondo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+</head>
+
+<body>
+  <!-- Header Section Start -->
+  <nav class="navbar navbar-expand-lg bg-blue ">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="./assets/img/logo-removebg-preview (1).png" alt="logo" class="img-fluid" width="80px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!--<span class="navbar-toggler-icon bg-white"></span>-->
+        <i class="fa-solid fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-danger2 fw-bold" aria-current="page" href="javascript:void()">Fights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Hotels</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light " href="#">Car Hire</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Trip Finder</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Inspirations</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  text-light" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu  text-light">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-success fw-bold" href="#">Log in</a>
+            </li>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- /Hedaer Section End -->
+  <!-- Banner Section Start -->
+  <section class="banner position-relative">
+    <div class="container mx-auto">
+        <div class="row">
+            <div class="col-sm-9 col-lg-7 text-white mt-1 position-absolute top-15">
+                <h1>"The best place to find <br> the cheapest airfares"</h1>
+                <p class=" fs-2 mt-2 position-absolute">
+                    - every single time
+                </p>
+            </div>
+        </div>
+
+        <div class="row mx-auto">
+            <div class="col-11 col-sm-10 col-md-10 position-absolute mt-sm-5 bottom-0 mb-lg-4 ms-1 ms-sm-1
+                    bg-danger3 rounded-0 py-1 px-2">
+                <nav class="mb-2">
+                    <div class="nav nav-tabs border-0" id="nav-tab" role="tablist">
+                        <div class="nav-item" role="presentation">
+                            <button class="nav-link rounded-0 border-0 text-white bg-danger4 active"
+                                id="flights-tab" data-bs-toggle="tab" data-bs-target="#flights-tab-pane"
+                                type="button" role="tab" aria-controls="flights-tab-pane" aria-selected="true">
+                                <i class="fa-solid fa-plane-departure"></i> Flights
+                            </button>
+                        </div>
+                        <div class="nav-item" role="presentation">
+                            <button class="nav-link rounded-0 border-0 text-white mx-1 bg-danger4"
+                                id="nav-hotel-tab" data-bs-toggle="tab" data-bs-target="#nav-hotel" type="button"
+                                role="tab" aria-controls="nav-hotel" aria-selected="false">
+                                <i class="fa-solid fa-hotel"></i> Hotels
+                            </button>
+                        </div>
+                        <div class="nav-item" role="presentation">
+                            <button class="nav-link rounded-0 border-0 text-white bg-danger4  " id="cars"
+                                data-bs-toggle="tab" data-bs-target="#cars-tab-pane" type="button" role="tab"
+                                aria-controls="cars-tab-pane" aria-selected="false">
+                                <i class="fa-solid fa-car"></i> Cars
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="tab-content position-relative" id="nav-tabContent">
+
+                    <div class="tab-pane fade show active" id="flights-tab-pane" role="tabpanel"
+                        aria-labelledby="flights-tab" tabindex="0">
+
+                        <form action="">
+                            <div class="row g-1">
+                                <div class="col-md-6 col-12 col-lg-2">
+                                    <!-- <div class="input group"> -->
+                                    <!-- <i class="fa fa-location-dot icon"></i> -->
+                                    <input type="text" class="form-control rounded-0"
+                                        placeholder="Enter Origin City" aria-label="origin">
+
+                                    <!-- </div> -->
+                                    <!-- <span><i class="fa-solid fa-arrow-right-arrow-left" style="color:rgb(166, 239, 239)"></i></span> -->
+                                </div>
+
+
+                                <div class=" col-12 col-md-6 col-lg-2">
+                                    <input type="text" class="form-control rounded-0"
+                                        placeholder="Enter Destination City" aria-label="destination">
+                                </div>
+                                <div class="col-sm-6 col-lg-2">
+                                    <input type="date" class="form-control rounded-0" placeholder="End date"
+                                        aria-label="edate">
+                                </div>
+                                <div class="col-sm-6 col-lg-2">
+                                    <input type="date" class="form-control rounded-0" placeholder="Start Date"
+                                        aria-label="sdate">
+                                </div>
+                                <div class="col-sm-6 col-lg-2">
+                                    <!-- <input type="text" class="form-control" placeholder="Passenger" aria-label="Passenger"> -->
+                                    <select name="select-passenger" class="form-control rounded-0"
+                                        id="select-passenger">
+                                        <option selected>Passenger</option>
+                                        <option value="1-pass">Passenger-1</option>
+                                        <option value="2-pass">Passenger-2</option>
+                                        <option value="3-pass">Passenger-3</option>
+                                        <option value="4-pass">Passenger-4</option>
+                                        <option value="5-pass">Passenger-5</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 col-lg-1 ">
+                                    <input type="button" class="form-control circle" value="Search"
+                                        aria-label="search">
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-wrap">
+                                <!-- <div class="row  text-white"> -->
+                                <div class="col-md-6 col-lg-3 text-white mt-2">
+                                    <i class="fa-solid fa-suitcase-rolling"></i>
+                                    <label for="Trip type" class="form-label">Trip Type:</label>
+                                    <select class="select-custome bg-danger3 border-0 text-white">
+                                        <option selected value=" trip">Return Trip</option>
+                                        <option>Visit Trip</option>
+                                    </select>
+                                </div>
+
+
+
+                                <div class="col-md-6 col-lg-3 text-white mt-2">
+                                    <i class="text-white fa-solid fa-ticket icnsmall"></i>
+                                    <!-- <span class="fs-6"> <i class="fa-solid fa-ticket"></i></span> -->
+                                    <label for="Ticket-Class" class="form-label">Ticket Class:</label>
+                                    <select class="bg-danger3 border-0 text-white" aria-label="">
+                                        <option selected value="Return type" id="trip type">Economy </option>
+                                        <option value="Return type" id="trip type">Business</option>
+                                        <option value="Return type" id="trip type">First</option>
+                                        <option value="Return type" id="trip type">Second</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6 col-lg-3 form-check text-white mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Direct Flight Only
+                                    </label>
+                                </div>
+
+                                <div class=" col-md-6  col-lg-3  form-check text-white mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Include Nearby Airports
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <div class="tab-pane fade " id="nav-hotel" role="tabpanel" aria-labelledby="nav-hotel-tab"
+                        tabindex="0">
+
+                        <form action="">
+                            <div class="row g-1">
+                                <div class="col-md-6 col-lg-2 col-12">
+                                    <input type="text" class="form-control" placeholder="Enter Origin City"
+                                        aria-label="origin">
+
+                                    <!-- <span><i class="fa-solid fa-arrow-right-arrow-left" style="color:rgb(166, 239, 239)"></i></span> -->
+                                </div>
+                                <div class="col-sm-6 col-lg-2">
+                                    <input type="text" class="form-control rounded-0"
+                                        placeholder="Enter Destination City" aria-label="destination">
+                                </div>
+                                <div class="col-sm-6 col-lg-2">
+                                    <input type="date" class="form-control rounded-0"
+                                        placeholder="Enter Origin City" aria-label="edate">
+                                </div>
+                                <div class="col-sm-6 col-lg-2">
+                                    <input type="date" class="form-control rounded-0"
+                                        placeholder="Enter Origin City" aria-label="sdate">
+                                </div>
+                                <div class="col-sm-6 col-lg-2">
+                                    <select name="select-passenger" class="form-control rounded-0"
+                                        id="select-passenger">
+                                        <option selected> Passenger</option>
+                                        <option value="1-pass">Passenger-1</option>
+                                        <option value="2-pass">Passenger-2</option>
+                                        <option value="3-pass">Passenger-3</option>
+                                        <option value="4-pass">Passenger-4</option>
+                                        <option value="5-pass">Passenger-5</option>
+                                    </select>
+                                    <!-- <input type="text" class="form-control" placeholder="Passenger" aria-label="Passenger"> -->
+                                </div>
+                                <div class="col-sm-6 col-lg-1">
+                                    <input type="button" class="form-control circle" value="Search"
+                                        aria-label="search">
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-wrap">
+                                <!-- <div class="row  text-white"> -->
+                                <div class="col-md-6 col-lg-3 text-white mt-2">
+                                    <i class="fa-solid fa-suitcase-rolling"></i>
+                                    <label for="Trip type" class="form-label">Trip Type:</label>
+                                    <select class="select-custome bg-danger3 border-0 text-white">
+                                        <option selected value=" trip">Return Trip</option>
+                                        <option>Visit Trip</option>
+                                    </select>
+                                </div>
+
+
+
+                                <div class="col-md-6 col-lg-3 text-white mt-2">
+                                    <span class="fs-6"> <i class="fa-solid fa-ticket"></i></span>
+                                    <label for="Ticket-Class" class="form-label">Ticket-Class:</label>
+                                    <select class="bg-danger3 border-0 text-white" aria-label="">
+                                        <option selected value="Return type" id="trip type">Economy</option>
+                                        <option value="Return type" id="trip type">Business</option>
+                                        <option value="Return type" id="trip type">First</option>
+                                        <option value="Return type" id="trip type">Second</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6 col-lg-2 form-check text-white mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Direct Flight Only
+                                    </label>
+                                </div>
+
+                                <div class=" col-md-6  col-lg-3  form-check text-white mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                        checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Include Nearby Airports
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade " id="cars-tab-pane" role="tabpanel" aria-labelledby="cars-tab"
+                        tabindex="0">
+
+                        <form action="">
+                            <div class="row g-1">
+                                <div class="col-md-6 col-lg-2 col-12">
+                                    <input type="text" class="form-control" placeholder="Enter Origin City"
+                                        aria-label="origin">
+                                </div>
+                                <!-- <span><i class="fa-solid fa-arrow-right-arrow-left" style="color:rgb(166, 239, 239)"></i></span> -->
+
+                                <div class="col-sm-6 col-lg-2">
+                                    <input type="text" class="form-control rounded-0"
+                                        placeholder="Enter Destination City" aria-label="destination">
+                                </div>
+                                <div class="col-sm-6 col-lg-2">
+                                    <input type="date" class="form-control rounded-0"
+                                        placeholder="Enter Origin City" aria-label="edate">
+                                </div>
+                                <div class="col-sm-6 col-lg-2">
+                                    <input type="date" class="form-control rounded-0"
+                                        placeholder="Enter Origin City" aria-label="sdate">
+                                </div>
+                                <div class="col-sm-6 col-lg-2">
+                                    <select name="select-passenger" class="form-control rounded-0"
+                                        id="select-passenger">
+                                        <option selected> Passenger</option>
+                                        <option value="1-pass">Passenger-1</option>
+                                        <option value="2-pass">Passenger-2</option>
+                                        <option value="3-pass">Passenger-3</option>
+                                        <option value="4-pass">Passenger-4</option>
+                                        <option value="5-pass">Passenger-5</option>
+                                    </select>
+                                    <!-- <input type="text" class="form-control" placeholder="Passenger" aria-label="Passenger"> -->
+                                </div>
+                                <div class="col-sm-6 col-lg-1">
+                                    <input type="button" class="form-control circle" value="Search"
+                                        aria-label="search">
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-wrap">
+                                <!-- <div class="row  text-white"> -->
+                                <div class="col-md-6 col-lg-3 text-white mt-2">
+                                    <i class="fa-solid fa-suitcase-rolling"></i>
+                                    <label for="Trip type" class="form-label">Trip Type:</label>
+                                    <select class="select-custome bg-danger3 border-0 text-white">
+                                        <option selected value=" trip">Return Trip</option>
+                                        <option>Visit Trip</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6 col-lg-3 text-white mt-2">
+                                    <span class="fs-6"> <i class="fa-solid fa-ticket"></i></span>
+                                    <label for="Ticket-Class" class="form-label">Ticket-Class:</label>
+                                    <select class="bg-danger3 border-0 text-white" aria-label="">
+                                        <option selected value="Return type" id="trip type">Economy</option>
+                                        <option value="Return type" id="trip type">Business</option>
+                                        <option value="Return type" id="trip type">First</option>
+                                        <option value="Return type" id="trip type">Second</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6 col-lg-2 form-check text-white mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Direct Flight Only
+                                    </label>
+                                </div>
+
+                                <div class=" col-md-6  col-lg-3  form-check text-white mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                        checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Include Nearby Airports
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- /Banner Section End -->
+  <!--Fun Section Start-->
+  <div class="fun bg-fark  text-white">
+    <div class="container">
+        <div class="row py-5">
+            <h3 class="text-center text-light fs-2 mt-1">SOME FUN WE COVERED </h3>
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="bg-dark my-2 p-1 text-center">
+                        <i class="fa-solid fa-person-biking fs-1 mb-1 "></i>
+                        <p>5670 M</p>
+                        <p class="lower">CYCLING TRACK</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="bg-dark my-2 p-1  text-center">
+                        <i class="fa-solid fa-map-location-dot text-light fs-1 mb-1"></i>
+                        <p>5670 M</p>
+                        <p class="lower">DISTANCE COVERD</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="bg-dark my-2 p-1 text-center">
+                        <i class="fa-solid fa-person-walking-luggage text-light fs-1 mb-1"></i>
+                        <p>5670 M</p>
+                        <p class="lower">ALTITUDE HIKED</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="bg-dark my-2 p-1  text-center">
+                        <i class="fa-solid fa-mountain-sun text-light fs-1 mb-1"></i>
+                        <p>5670 M</p>
+                        <p class="lower">SPENT ADVENTURE</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="bg-dark my-2 p-1 text-center">
+                        <i class="fa-solid fa-shrimp text-light fs-1 mb-1"></i>
+                        <p>5670 M</p>
+                        <p class="lower">JUGLE DISTANCE</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="bg-dark my-2 p-1  text-center">
+                        <i class="fa-solid fa-shrimp text-light fs-1 mb-1"></i>
+                        <p class="fw-bold">5670 M</p>
+                        <p class="lower">JUGLE DISTANCE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+  <!--/Fun Section End-->
+  <!-- NewsSection Start-->
+  <div class="news py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-9 text-center text-white">
+          <h2 class="fw-bold mt-4">SUBSCRIBE FOR OUR TRAVEL NEWSLETTERS</h2>
+          <p class="mt-4 mx-5 sm-5 px-sm-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus sit
+            adipisci at qui voluptatum maiores quod fugit iusto itaque.</p>
+          <form action="">
+            <input type="email" placeholder="Enter your email address......"
+              class="w-50 opacity-25 border-0 text-black">
+            <input type="submit" value="SEARCH" class="bg-white border-0 px-4">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/News Section Start -->
+  <!--Destination Section Start-->
+  <section class="popular">
+    <div class="container">
+        <div class="row">
+            <h3 class="text-center my-1 text-light fs-1 mt-4">PAPULAR DESTINATION</h3>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 g-3 mx-auto">
+                    <div class="card border-3">
+                        <img class="card-img-top" src="./assets/img/dest1.jpg" alt="dest1">
+                        <div class="card-body">
+                            <p class="card-title h6">
+                                <span class="text-danger2">$999 </span>
+                                Rome,Florance & Venice 9-Night Vacation w/Air
+                            </p>
+                            <p class="card-text">
+                                This is the lowest price we've seen in four years for a nine-night
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 g-3 mx-auto">
+                    <div class="card border-3">
+                        <img class="card-img-top" src="./assets/img/dest2.jpg" alt="dest2">
+                        <div class="card-body">
+                            <p class="card-title h6">
+                                <span class="text-danger2">$1699 </span>
+                                Australia: Sydney & Fiji Vacation w/Air, Save
+                                <span class="text-danger2">$550 </span>
+                            </p>
+                            <p class="card-text">
+                                This is the lowest price we've seen in four years for a nine-night
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 g-3 mx-auto">
+                    <div class="card border-3">
+                        <img class="card-img-top" src="./assets/img/dest3.jpg" alt="dest3">
+                        <div class="card-body">
+                            <p class="card-title h6">
+                                <span class="text-danger2">$1699 </span>
+                                Greek Island 8-Night Vacation w/Air
+                                <span class="text-danger2">Save $1060 </span>
+                            </p>
+                            <p class="card-text">
+                                This is the lowest price we've seen in four years for a nine-night
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 g-3 mx-auto">
+                    <div class="card border-3">
+                        <img class="card-img-top" src="./assets/img/4.png" alt="dest4">
+                        <div class="card-body">
+                            <p class="card-title h6">
+                                <span class="text-danger2">$899 </span>
+                                Ireland & Germany 6-Night Adventure w/Air
+                            </p>
+                            <p class="card-text">
+                                This is the lowest price we've seen in four years for a nine-night
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row mt-4 mb-4">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 g-3 mx-auto ">
+                    <div class="card border-3">
+                        <img class="card-img-top" src="./assets/img/dest5.jpg" alt="dest5">
+                        <div class="card-body">
+                            <p class="card-title h6">
+                                <span class="text-danger2">$1299</span>
+                                Morocco 4-Star Escort Vacation w/Air,
+                                <span class="text-danger2">Save $1600</span>
+                            </p>
+                            <p class="card-text">
+                                This is the lowest price we've seen in four years for a nine-night
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 g-3 mx-auto ">
+                    <div class="card border-3">
+                        <img class="card-img-top" src="./assets/img/dest6.jpg"  alt="dest6">
+                        <div class="card-body">
+                            <p class="card-title h6">
+                                <span class="text-danger2">$639</span>
+                                Cabo All-Inclusive Beach Getway w/Air,
+                                <span class="text-danger2">Save $250</span>
+                            </p>
+                            <p class="card-text">
+                                This is the lowest price we've seen in four years for a nine-night
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 g-3 mx-auto ">
+                    <div class="card border-3">
+                        <img class="card-img-top" src="./assets/img/New-Zealand.png" alt="dest6">
+                        <div class="card-body">
+                            <p class="card-title h6">
+                                <span class="text-danger2">$2299 </span>
+                                New Zealand: Multi-City Trip w/Tours & Car Rental
+                            </p>
+                            <p class="card-text">
+                                This is the lowest price we've seen in four years for a nine-night
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 g-3 mx-auto ">
+                    <div class="card border-3">
+                        <img class="card-img-top" src="./assets/img/Turkey.png" alt="dest8">
+                        <div class="card-body">
+                            <p class="card-title h6">
+                                <span class="text-danger2">$1942</span>
+                                & up Turkey 8-Nt. Trip w/Air, Guided Tours & Hotels
+                            </p>
+                            <p class="card-text">
+                                This is the lowest price we've seen in four years for a nine-night
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+  <!--/Destination Section Start-->
+   <!-- Estimate Section Start -->
+   <section class="estimate py-4 bg-purple1 position-relative">
+    <div class="position-absolute bottom-0 end-0">
+        <img src="./assets/img/rome1.png"  style="width: 150px; height: 230px;" class="estimg mx-0 " alt="">
+    </div>
+    <div class="container">
+        <h3 CLASS="text-white fw-bold mt-2">GET A QUICK ESTIMATE!</h3>
+        <p class="text-white fw-bold fs-6 mt-0">GET A PROFESSIONAL HELP</p>
+        <hr size="4px bold" style="width:50px; color:#fff; border-width: 3px;">
+        <div class="row mb-4" id="estimate">
+            <form>
+                <select name="country" class="col-lg-2 col-sm-4 col-12 mb-2 py-2 mx-1">
+                    <option>Travel purpose</option>
+                    <option>Holiday</option>
+                    <option>Mediacal</option>
+                    <option>Sports</option>
+                    <option>Fun</option>
+                </select>
+                <input type=" date" placeholder=" Enter Date"
+                    class="col-lg-2 col-sm-4 col-12 py-2 mb-2 mx-1 border-0 ">
+                <select name="country" class="col-lg-2 col-sm-4 col-12 mb-2 py-2 mx-1">
+                    <option>Number of people</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <input type="email" placeholder="  Your Email..."
+                    class="col-lg-2 col-sm-4 col-12 py-2 border-0 mb-2 mx-1">
+                <input type="text" placeholder="CALCULATE NOW"
+                    class="col-lg-2 col-sm-4 col-12 py-2 mx-1 mb-2 bg-warning2 border-0 text-black text-center fw-bold">
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Estimate Section End -->
+
+<!-- Blog Section Start -->
+<section class="blog ">
+    <div class="container">
+        <div class="row py-4">
+            <h3 class="fw-bold text-center ">LATEST BLOG</h3>
+            <P class="col-md-10 col-sm-12 col-12 col-lg-8  text-center m-auto offset-md-2">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. debitis hic sed quidem culpa voluptate cumque, sunt unde suscipit soluta laudantium quas beatae reiciendis?
+            </P>
+        </div>
+        <div class="row ">
+            <div class="col-md-6  col-lg-6 mb-3">
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 mb-2">
+                        <img src="./assets/img/blog1.jpeg" style="width: 180px; height: 150px;" alt="10 things"
+                            class="img-fluid mx-auto mt-2 ">
+                    </div>
+                    <div class="col-sm-8 col-md-8 ">
+                        <p class="mb-0">feb 01,2016</p>
+                        <h6>10 THINGS TODO BEFORE TRAVEL</h6>
+                        <hr class="mb-3 mt-0" size="4px" style="width: 50px; color:#ff0000; border-width: 3px;">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid aperiam consequatur
+                            est maiores
+                            cupiditate eius commodi!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="row ">
+                    <div class="col-sm-4 col-md-4 mb-2">
+                        <img src="./assets/img/blog2.jpeg" style="width: 180px; height: 150px;" alt="lazy life"
+                            class="img-fluid mx-auto mt-2 ">
+                    </div>
+                    <div class="col-sm-8 col-md-8 ">
+                        <p class="mb-0">Jan 23, 2016</p>
+                        <h6>SAY NO TO LAZY LIFE</h6>
+                        <hr class="mb-3 mt-0" size="4px" style="width:50px; color:#08d108; border-width: 3px;">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid aperiam consequatur
+                            est maiores
+                            cupiditate eius commodi!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Section End -->
+
+<!-- Footer Section Strat -->
+<section class="footer py-4 ">
+    <div class="container text-white">
+        <div class="row">
+            <div class="country col-lg-4 col-md-6 mb-3">
+                <h4>TOP COUNTRIES</h4>
+                <p class="text-secondary mb-0"><i class="fa-solid fa-earth-americas"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">United States </a>
+                </p>
+                <p class="text-secondary mb-0"><i class="fa-solid fa-earth-americas"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">United Kingdom </a>
+                </p>
+                <p class="text-secondary mb-0"><i class="fa-solid fa-earth-americas"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Spain </a>
+                </p>
+                <p class="text-secondary mb-0"><i class="fa-solid fa-earth-americas"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Thailand </a>
+                </p>
+                <p class="text-secondary mb-0"><i class="fa-solid fa-earth-americas"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">India </a>
+                </p>
+                <p class="text-secondary mb-0"><i class="fa-solid fa-earth-americas"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Germany </a>
+                </p>
+                <p class="text-secondary mb-0"><i class="fa-solid fa-earth-americas"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Australia </a>
+                </p>
+                <p class="text-secondary mb-0"><i class="fa-solid fa-earth-americas"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">France </a>
+                </p>
+                <p class="text-secondary mb-0"><i class="fa-solid fa-earth-americas"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Italy </a>
+                </p>
+                <p class="text-secondary mb-0"><i class="fa-solid fa-earth-americas"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Denmark </a>
+                </p>
+            </div>
+
+            <div class="city col-lg-4 col-md-6 mb-3">
+                <h4>TOP CITIES</h4>
+                <P class="text-secondary mb-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Newyork</a>
+                    United States
+                </P>
+                <P class="text-secondary mb-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">London</a>
+                    United Kingdom
+                </P>
+                <P class="text-secondary mb-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Madrid</a>
+                    Spain
+                </P>
+                <P class="text-secondary mb-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Bangkok </a>
+                    Thailand
+                </P>
+                <P class="text-secondary mb-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Delhi </a>
+                    India
+                </P>
+                <P class="text-secondary mb-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Berlin</a>
+                    Germany
+                </P>
+                <P class="text-secondary mb-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Canberra </a>
+                    Australia
+                </P>
+                <P class="text-secondary mb-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Paris </a>
+                    France
+                </P>
+                <P class="text-secondary mb-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Rome</a>
+                    Italy
+                </P>
+                <P class="text-secondary mb-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Flight to
+                    <a href="#javascript:void()" class="text-decoration-none text-white">Copenhagen</a>
+                    Denmark
+                </P>
+            </div>
+
+            <div class="site col-lg-4 col-md-12 ahover">
+                <h4>INTERNATIONAL SITES</h4>
+
+                <div class="row">
+                    <div class=" col-md-6 col-6">
+                        <P class="text-secondary  mb-0">
+                            <a href="" class="text-decoration-none text-light"><img
+                                    src="https://flagcdn.com/16x12/hk.png" srcset="https://flagcdn.com/32x24/hk.png 2x,
+            https://flagcdn.com/48x36/hk.png 3x" width="16" height="12" alt="Hong Kong"> Hong
+                                Kong</a>
+                        </P>
+                        <P class="text-secondary mb-0">
+                            <a href="" class="text-decoration-none text-light"><img
+                                    src="https://flagcdn.com/16x12/jm.png" srcset="https://flagcdn.com/32x24/jm.png 2x,
+           https://flagcdn.com/48x36/jm.png 3x" width="16" height="12" alt="Jamaica">Jamaica </a>
+                        </p>
+                        <p class="text-secondary  mb-0">
+                            <a href="" class="text-decoration-none text-light"><img
+                                    src="https://flagcdn.com/16x12/pt.png" srcset="https://flagcdn.com/32x24/pt.png 2x,
+      https://flagcdn.com/48x36/pt.png 3x" width="16" height="12" alt="Portugal">Portugal</a>
+                        </p>
+                        <p class="text-secondary mb-0">
+                            <a href="" class="text-decoration-none text-light"> <img
+                                    src="https://flagcdn.com/16x12/gb-sct.png" srcset="https://flagcdn.com/32x24/gb-sct.png 2x,
+         https://flagcdn.com/48x36/gb-sct.png 3x" width="16" height="12" alt="Scotland">
+                                Scotland</a>
+                        </p>
+                        <p class="text-secondary mb-0">
+                            <a href="" class="text-decoration-none text-light"> <img
+                                    src="https://flagcdn.com/16x12/lk.png" srcset="https://flagcdn.com/32x24/lk.png 2x,
+         https://flagcdn.com/48x36/lk.png 3x" width="16" height="12" alt="Sri Lanka">
+                                Sri Lanka</a>
+                        </p>
+                        <p class="text-secondary mb-0">
+                            <a href="" class="text-decoration-none text-light"> <img
+                                    src="https://flagcdn.com/16x12/es.png" srcset="https://flagcdn.com/32x24/es.png 2x,
+          https://flagcdn.com/48x36/es.png 3x" width="16" height="12" alt="Spain">
+                                Spain</a>
+                        </p>
+                        <p class="text-secondary mb-0">
+                            <a href="" class="text-decoration-none text-light"> <img
+                                    src="https://flagcdn.com/16x12/th.png" srcset="https://flagcdn.com/32x24/th.png 2x,
+         https://flagcdn.com/48x36/th.png 3x" width="16" height="12" alt="Thailand">
+                                Thailand</a>
+                        </p>
+                    </div>
+
+                    <div class=" col-md-6 col-6">
+                        <P class="text-secondary mb-0">
+                            <a href="" class="text-decoration-none text-light"> <img
+                                    src="https://flagcdn.com/16x12/cv.png" srcset="https://flagcdn.com/32x24/cv.png 2x,
+          https://flagcdn.com/48x36/cv.png 3x" width="16" height="12" alt="Cape Verde"> Cape
+                                Verde</a>
+                        </P>
+
+                        <P class="text-secondary mb-0">
+                            <a href="" class="text-decoration-none text-light"> <img
+                                    src="https://flagcdn.com/16x12/ax.png" srcset="https://flagcdn.com/32x24/ax.png 2x,
+          https://flagcdn.com/48x36/ax.png 3x" width="16" height="12" alt="Åland Islands"> Åland
+                                Islands</a>
+                        </P>
+
+                        <P class="text-secondary mb-0">
+                            <a href="" class="text-decoration-none text-light"> <img
+                                    src="https://flagcdn.com/16x12/au.png" srcset="https://flagcdn.com/32x24/au.png 2x,
+          https://flagcdn.com/48x36/au.png 3x" width="16" height="12" alt="Australia">
+                                Australia</a>
+                        </P>
+
+                        <P class="text-secondary mb-0">
+                            <a href="" class="text-decoration-none text-light"> <img
+                                    src="https://flagcdn.com/16x12/bb.png" srcset="https://flagcdn.com/32x24/bb.png 2x,
+          https://flagcdn.com/48x36/bb.png 3x" width="16" height="12" alt="Barbados">
+                                Barbados</a>
+                        </P>
+
+                        <P class="text-secondary mb-0">
+                            <a href="" class="text-decoration-none text-light"> <img
+                                    src="https://flagcdn.com/16x12/in.png" srcset="https://flagcdn.com/32x24/in.png 2x,
+          https://flagcdn.com/48x36/in.png 3x" width="16" height="12" alt="India"> India</a>
+                        </P>
+
+                        <P class="text-secondary mb-0">
+                            <a href="" class="text-decoration-none text-light"> <img
+                                    src="https://flagcdn.com/16x12/is.png" srcset="https://flagcdn.com/32x24/is.png 2x,
+          https://flagcdn.com/48x36/is.png 3x" width="16" height="12" alt="Iceland"> Iceland</a>
+                        </P>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" row mt-3 py-1">
+            <div class="footbotm ">
+                <div class="d-lg-flex  d-md-flex mb-0 gap-lg-3 gap-sm-1 ahover">
+                    <div class="foot  mx-md-4 mx-sm-3 text-center  pb-3 pb-lg-0">
+                       <!-- <div class=" col-12 pb-3 pb-lg-0 col-sm-center"> -->
+                        <a href="javascript:void()">
+                        <img src="./assests/img/foot1.png" class=" img-fluid w-15 " alt=""></a>
+                    </div>
+                    <!-- </div> -->
+
+                    <div class=" ">
+                        <a href="javascript:void()" class="text-decoration-none text-white me-3">About Us</a>
+                        <a href="javascript:void()" class="text-decoration-none text-white me-3">Jobs</a>
+                        <a href="javascript:void()" class="text-decoration-none text-white me-3">Press</a>
+                        <a href="javascript:void()" class="text-decoration-none text-white me-3">Affilite</a>
+                        <a href="javascript:void()" class="text-decoration-none text-white me-3">Terms of use</a>
+                        <a href="javascript:void()" class="text-decoration-none text-white me-3">Privacy Policy</a>
+                        <a href="javascript:void()" class="text-decoration-none text-white me-3">Cookies</a>
+                        <a href="javascript:void()" class="text-decoration-none text-white me-3">Airlines</a>
+                        <a href="javascript:void()" class="text-decoration-none text-white me-3">Apps</a>
+                        <a href="javascript:void()" class="text-decoration-none text-white me-3">Helps</a>
+                    
+                        <p class=" col-lg-10 mx-0 mb-3  mt-sm-3 col-12 mt-3 ">momondo.co.uk is a free , independent global travel search site comparing billions of
+                            cheap flights , hotels and car hire deals</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class=" social col-lg-12 col-md-12 text-center text-lg-center text-md-center mt-2 ">
+                <a href="javascript:void()" class="text-decoration-none text-white me-3"><i
+                        class="fa-brands fa-twitter"></i></a>
+                <a href="javascript:void()" class="text-decoration-none text-white me-3"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="javascript:void()" class="text-decoration-none text-white me-3"><i
+                        class="fa-brands fa-google"></i></a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Footer Section End -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
